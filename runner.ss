@@ -1,0 +1,10 @@
+(import (chezscheme)
+        (libs customsyntax))
+
+(let ((i 0) 
+      (a-second (make-time 'time-duration 0 1)))
+ (while (> 5 i)
+  (display (current-time 'time-utc))
+  (newline)
+  (sleep a-second)
+  (set! i (+ 1 i))))
